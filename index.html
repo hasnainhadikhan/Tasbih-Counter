@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<style>
+    *{
+      padding: auto;
+      background-color: #63c1f8;
+   }
+   .name{
+    text-align: center;
+    font-size: 48px;
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background-color: rgb(18, 18, 99);   
+ height: 120px; 
+}
+
+#para{
+   position: relative;
+    top: 67px;
+   text-align: center;
+    font-size: 48px;
+    font-weight: bolder;
+
+}
+button.call{
+    
+    position: relative;
+    top: 100px;
+    left: 27%;
+    width: 190px;
+    height: 60px;
+    font-size: 23px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    border: 4px solid rgb(214, 211, 211);
+    color: white;
+    margin: 0px 12px;
+}
+button.call:hover{
+    background-color: rgb(18, 18, 99);
+}
+.end{
+  text-align: center;
+  position: relative;
+  top: 330px;
+  background-color: aliceblue;
+  height: 84px;
+  font-size: 38px;
+
+}
+
+</style>
+<body>
+<div>
+   <h1 class="name">
+      Tasbih Counter 
+   </h1>
+</div>
+<h1 id="para">0</h1>
+<div class="main">
+<button class="call" onclick="increment()">Increment</button>
+<button class="call" onclick="decrement()">Decrement</button>
+<button class="call" onclick="Reset()">Reset</button> 
+</div>
+
+<div>
+    <h1 class="end">@ Copyright by PapaPamper</h1>
+</div>
+
+
+
+    <script>
+        var data = 0;
+let para = document.getElementById('para')
+
+function increment(){
+
+    data++;
+    para.innerText = data;
+} 
+  
+function decrement(){
+    if(data >= 0){
+        data--;
+        para.innerText = data;
+    }
+ }
+ function Reset(){
+    data = 0; 
+    para.innerText = data; 
+ }
+    </script>
+</body>
+</html>
